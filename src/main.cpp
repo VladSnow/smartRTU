@@ -34,7 +34,7 @@ int main()
 
 		PicStorage = new CPicturesStorage();
 		FontStorage = new CFontStorage();
-		FontStorage->setFont((char*)"arialBold", (char*)"lib/TFont/ArialBold.ttf");
+		FontStorage->setFont((char*)"arialBold", (char*)"resources/fonts/ArialBold.ttf");
 
 		engine = new Engine;
 		engine->start();

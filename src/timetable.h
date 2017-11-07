@@ -12,7 +12,7 @@
 using namespace std;
 using json = nlohmann::json;
 
-#define DEFAULT_TIMETABLE_FILE "timetable.json"
+#define DEFAULT_TIMETABLE_FILE "resources/timetable.json"
 
 struct TimetableDate { 
 	int y, m, d; 

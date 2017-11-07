@@ -21,7 +21,7 @@
 
 using namespace std;
 
-#define ADS_FILES_PATH "./widgets/text/" 
+#define ADS_FILES_PATH "./resources/ads/text/" 
 #define ADS_FILE_NAME "text.txt"
 #define FLAG_FILE_NAME "flag"
 
