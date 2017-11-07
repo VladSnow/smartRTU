@@ -10,7 +10,8 @@ WOBJ = 	obj/IWidget.o \
 		obj/WgAds.o \
 		obj/WgSockets.o \
 		obj/WgTimetable.o \
-		obj/WgWatchdog.o
+		obj/WgWatchdog.o \
+		obj/WgMulAds.o
 
 INCS = 	-I/usr/include/freetype2 
  
@@ -30,7 +31,9 @@ OBJ = 	obj/CPicturesStorage.o \
 		obj/timetable.o \
 		obj/board.o \
 		obj/Engine.o \
-		obj/desktop.o
+		obj/desktop.o \
+		obj/Ads.o \
+		obj/AdsText.o
 
 VGINCS = \
 		-I/opt/vc/include \
@@ -95,6 +98,12 @@ obj/timetable.o : src/timetable.cpp src/timetable.h
 obj/desktop.o : src/desktop.cpp src/desktop.h
 	@g++ -c -o $@ $< $(FLAGS)
 
+obj/Ads.o : src/Ads.cpp src/Ads.h
+	@g++ -c -o $@ $< $(FLAGS)
+
+obj/AdsText.o : src/AdsText.cpp src/AdsText.h
+	@g++ -c -o $@ $< $(FLAGS)
+
 obj/WgBackground.o : src/widgets/WgBackground.cpp src/widgets/WgBackground.h src/widgets/IWidget.h $(HDRS)
 	@g++ -c -o $@ $< $(INCS) $(VGINCS) $(FLAGS)
 
@@ -117,6 +126,9 @@ obj/WgTimetable.o : src/widgets/WgTimetable.cpp src/widgets/WgTimetable.h src/wi
 	@g++ -c -o $@ $< $(INCS) $(VGINCS) $(FLAGS)
 
 obj/WgWatchdog.o : src/widgets/WgWatchdog.cpp src/widgets/WgWatchdog.h src/widgets/IWidget.h $(HDRS)
+	@g++ -c -o $@ $< $(INCS) $(VGINCS) $(FLAGS)
+
+obj/WgMulAds.o : src/widgets/WgMulAds.cpp src/widgets/WgMulAds.h src/widgets/WgBackground.h src/widgets/IWidget.h $(HDRS)
 	@g++ -c -o $@ $< $(INCS) $(VGINCS) $(FLAGS)
 
 clean :

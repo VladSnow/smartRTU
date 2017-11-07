@@ -5,6 +5,7 @@
 #include "widgets/WgCalendar.h"
 #include "widgets/WgForecast.h"
 #include "widgets/WgAds.h"
+#include "widgets/WgMulAds.h"
 #include "widgets/WgSockets.h"
 #include "widgets/WgTimetable.h"
 #include "widgets/WgWatchdog.h"
@@ -17,7 +18,8 @@ Board::Board()
 	widgets = NULL;
 	current = NULL;
 
-	addWidget(new WgAds(0, 8, md3x8));         // 1, 8
+	addWidget(new WgMulAds(0, 8, md3x8));         // 1, 8
+	//addWidget(new WgAds(0, 8, md3x8));         // 1, 8
 	addWidget(new WgForecast(3, 8, md1x2));
 	addWidget(new WgClock(3, 6, md1x3));
 	addWidget(new WgCalendar(3, 3, md1x3));
